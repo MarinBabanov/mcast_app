@@ -1,0 +1,7 @@
+{
+  "name": "mcastapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
