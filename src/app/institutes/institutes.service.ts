@@ -11,10 +11,8 @@ export class InstitutesService {
       id: 'inst1',
       title: 'Institute 1',
       // Courses placeholder to be changed to a separate page with individual clickable courses
-      courses: [
-        'Institute 1 Course 1', 
-        'Institute 1 Course 2', 
-        'Institute 1 Course 3']
+      // I have no idea what the fuck is going on...
+      courses: ['./institutes/institute-courses/ias01']
     },
     {
       id: 'inst2',

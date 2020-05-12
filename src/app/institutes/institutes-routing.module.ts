@@ -10,8 +10,17 @@ const routes: Routes = [
   },
   {
     path: 'institute-courses',
-    loadChildren: () => import('./institute-courses/institute-courses.module').then( m => m.InstituteCoursesPageModule)
-  }
+    children:[
+      {
+        path: '',
+        loadChildren: () => import('./institute-courses/institute-courses.module').then( m => m.InstituteCoursesPageModule)
+      },
+      {
+        path: ':courseId',
+        loadChildren: () => import('./institute-courses/ias01/ias01.module').then( m => m.IAS01PageModule)
+      }
+    ]
+  },
 ];
 
 @NgModule({

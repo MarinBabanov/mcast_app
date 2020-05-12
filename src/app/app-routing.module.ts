@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import('./institutes/institute-courses/institute-courses.module').then( m => m.InstituteCoursesPageModule)
       }
     ]
-  }
+  },
 ];
 
 @NgModule({

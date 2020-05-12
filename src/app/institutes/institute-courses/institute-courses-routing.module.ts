@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: InstituteCoursesPage
-  }
+  },
+  {
+    path: 'ias01',
+    loadChildren: () => import('./ias01/ias01.module').then( m => m.IAS01PageModule)
+  },
 ];
 
 @NgModule({
@@ -15,3 +19,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class InstituteCoursesPageRoutingModule {}
+
+
