@@ -1,5 +1,5 @@
 {
-  "name": "mcastapp",
+  "name": "McastApp",
   "integrations": {
     "capacitor": {}
   },

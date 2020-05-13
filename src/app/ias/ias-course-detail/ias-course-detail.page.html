@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons>
+      <ion-back-button defaultHref="/ias"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ loadedIAScourse.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1><ion-text color="success">{{ loadedIAScourse.number }}</ion-text></h1>
+        <h1> {{ loadedIAScourse.title }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-text color="success">MQF Level: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedIAScourse.level }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="success">Course Duration: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedIAScourse.duration }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="success">Entry Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedIAScourse.entryRequirements">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="success">Course Description: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedIAScourse.description }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

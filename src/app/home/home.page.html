@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      MCAST
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">MCAST HOME</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <ion-label>     
+          <br>   
+          <h1><ion-text color="warning">Hello</ion-text></h1>          
+        </ion-label>
+        <ion-label> 
+          <br>       
+          <p>To provide universally accesible vocational and professional education and training with an international dimension, esponsive to the needs of the individual and the economy.</p>                        
+        </ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <ion-label>        
+          <br><h1><ion-text color="warning">MCAST Institutes</ion-text></h1>          
+        </ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-item (click)="ias()"><ion-text color="success">0101 Institute of the Applied Science</ion-text></ion-item>
+        <ion-item (click)="ibmc()"><ion-text color="danger">0102 Institute of Business Management & Commerce</ion-text></ion-item>
+        <ion-item (click)="ics()"><ion-text color="warning">0103 Institute of Community Services</ion-text></ion-item>
+        <ion-item (click)="ica()"><ion-text color="tertiary">0104 Institute for the Creative Arts</ion-text></ion-item>
+        <ion-item (click)="iet()"><ion-text color="secondary">0105 Institute of Engineering & Transport</ion-text></ion-item>
+        <ion-item (click)="iict()"><ion-text color="warning">0106 Institute of Information & Communication Technology</ion-text></ion-item>
+        <ion-item (click)="gozo()"><ion-text color="secondary">0107 Gozo Campus</ion-text></ion-item>
+        <ion-item (click)="generic()"><ion-text color="dark">0108 Generic Degree</ion-text></ion-item>
+        <ion-item (click)="masters()"><ion-text color="tertiary">0109 Masters</ion-text></ion-item>
+        <ion-item (click)="cpd()"><ion-text color="dark">0110 CPD</ion-text></ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <ion-label>     
+          <br>   
+          <h1><ion-text color="warning">Contact Us</ion-text></h1>          
+        </ion-label>
+
+        <h1><ion-icon color="warning" name="call"></ion-icon></h1>
+        <h4>2398 7100</h4>
+
+        <h1><ion-icon color="warning" name="location"></ion-icon></h1>
+        <h4>Triq Kordin, Raħal Ġdid</h4>
+
+        <h1 >          
+            <ion-icon color="warning" name="logo-instagram"></ion-icon>
+            <ion-icon color="warning" name="logo-facebook"></ion-icon>
+            <ion-icon color="warning" name="logo-youtube"></ion-icon>
+            <ion-icon color="warning" name="logo-twitter"></ion-icon>          
+        </h1>        
+        
+      </div>
+    </ion-col>
+  </ion-row>  
+  
+</ion-content>
