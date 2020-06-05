@@ -129,19 +129,19 @@ const routes: Routes = [
       }
     ]
   },
-  // {
-  //   path: 'cpd',
-  //   children:[
-  //     {
-  //       path:'',
-  //       loadChildren: () => import('./cpd/cpd.module').then( m => m.CPDPageModule)
-  //     },
-  //     {
-  //       path:':CPDcourseId',
-  //       loadChildren: () => import('./cpd/cpd-course-detail/cpd-course-detail.module').then( m => m.CpdCourseDetailPageModule)
-  //     }
-  //   ]
-  // },
+   {
+     path: 'cpd',
+     children:[
+       {
+         path:'',
+         loadChildren: () => import('./cpd/cpd.module').then( m => m.CPDPageModule)
+       },
+       {
+         path:':CPDcourseId',
+         loadChildren: () => import('./cpd/cpd-course-detail/cpd-course-detail.module').then( m => m.CpdCourseDetailPageModule)
+       }
+     ]
+   },
 ];
 
 @NgModule({
