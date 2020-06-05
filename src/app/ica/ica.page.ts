@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICAcourse } from './icacourses.model';
+import { IcaService } from './ica.service';
 
 @Component({
   selector: 'app-ica',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ICAPage implements OnInit {
 
-  constructor() { }
+  ICAcourses: ICAcourse[];
+
+  constructor(private icaService: IcaService) { }
 
   ngOnInit() {
+    this.ICAcourses = this.icaService.getAllICAcourses();
   }
 
 }

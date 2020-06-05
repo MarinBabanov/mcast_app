@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICScourse } from './icscourses.model';
+import { IcsService } from './ics.service';
 
 @Component({
   selector: 'app-ics',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ICSPage implements OnInit {
 
-  constructor() { }
+  ICScourses: ICScourse[];
+
+  constructor(private icsService: IcsService) { }
 
   ngOnInit() {
+    this.ICScourses = this.icsService.getAllICScourses();
   }
 
 }

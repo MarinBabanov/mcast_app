@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IBMCcourse } from './ibmccourses.model';
+import { IbmcService } from './ibmc.service';
 
 @Component({
   selector: 'app-ibmc',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IBMCPage implements OnInit {
 
-  constructor() { }
+  IBMCcourses: IBMCcourse[];
+
+  constructor(private ibmcService: IbmcService) { }
 
   ngOnInit() {
+    this.IBMCcourses = this.ibmcService.getAllIBMCcourses();
   }
 
 }

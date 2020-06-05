@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GENERICcourse } from './genericcourses.model';
+import { GenericService } from './generic.service';
 
 @Component({
   selector: 'app-generic',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GENERICPage implements OnInit {
 
-  constructor() { }
+  GENERICcourses: GENERICcourse[];
+
+  constructor(private genericService: GenericService) { }
 
   ngOnInit() {
+    this.GENERICcourses = this.genericService.getAllGENERICcourses();
   }
 
 }

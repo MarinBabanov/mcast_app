@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ICAPage
+  },
+  {
+    path: 'ica-course-detail',
+    loadChildren: () => import('./ica-course-detail/ica-course-detail.module').then( m => m.IcaCourseDetailPageModule)
   }
 ];
 

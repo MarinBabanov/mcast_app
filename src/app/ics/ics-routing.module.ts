@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ICSPage
+  },
+  {
+    path: 'ics-course-detail',
+    loadChildren: () => import('./ics-course-detail/ics-course-detail.module').then( m => m.IcsCourseDetailPageModule)
   }
 ];
 

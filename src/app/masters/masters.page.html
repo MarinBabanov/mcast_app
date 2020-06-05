@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Masters</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let MASTERScourse of MASTERScourses" [routerLink]="['./', MASTERScourse.index]">
+      <ion-label color="tertiary">{{ MASTERScourse.index }} {{ MASTERScourse.title }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

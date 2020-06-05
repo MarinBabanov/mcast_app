@@ -26,40 +26,122 @@ const routes: Routes = [
   },
   {
     path: 'ibmc',
-    loadChildren: () => import('./ibmc/ibmc.module').then( m => m.IBMCPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./ibmc/ibmc.module').then( m => m.IBMCPageModule)
+      },
+      {
+        path:':IBMCcourseId',
+        loadChildren: () => import('./ibmc/ibmc-course-detail/ibmc-course-detail.module').then( m => m.IbmcCourseDetailPageModule)
+      }
+    ]
+    
   },
   {
     path: 'ics',
-    loadChildren: () => import('./ics/ics.module').then( m => m.ICSPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./ics/ics.module').then( m => m.ICSPageModule)
+      },
+      {
+        path:':ICScourseId',
+        loadChildren: () => import('./ics/ics-course-detail/ics-course-detail.module').then( m => m.IcsCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'ica',
-    loadChildren: () => import('./ica/ica.module').then( m => m.ICAPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./ica/ica.module').then( m => m.ICAPageModule)
+      },
+      {
+        path:':ICAcourseId',
+        loadChildren: () => import('./ica/ica-course-detail/ica-course-detail.module').then( m => m.IcaCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'iet',
-    loadChildren: () => import('./iet/iet.module').then( m => m.IETPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./iet/iet.module').then( m => m.IETPageModule)
+      },
+      {
+        path:':IETcourseId',
+        loadChildren: () => import('./iet/iet-course-detail/iet-course-detail.module').then( m => m.IetCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'iict',
-    loadChildren: () => import('./iict/iict.module').then( m => m.IICTPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./iict/iict.module').then( m => m.IICTPageModule)
+      },
+      {
+        path:':IICTcourseId',
+        loadChildren: () => import('./iict/iict-course-detail/iict-course-detail.module').then( m => m.IictCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'gozo',
-    loadChildren: () => import('./gozo/gozo.module').then( m => m.GOZOPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./gozo/gozo.module').then( m => m.GOZOPageModule)
+      },
+      {
+        path:':GOZOcourseId',
+        loadChildren: () => import('./gozo/gozo-course-detail/gozo-course-detail.module').then( m => m.GozoCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'generic',
-    loadChildren: () => import('./generic/generic.module').then( m => m.GENERICPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./generic/generic.module').then( m => m.GENERICPageModule)
+      },
+      {
+        path:':GENERICcourseId',
+        loadChildren: () => import('./generic/generic-course-detail/generic-course-detail.module').then( m => m.GenericCourseDetailPageModule)
+      }
+    ]
   },
   {
     path: 'masters',
-    loadChildren: () => import('./masters/masters.module').then( m => m.MASTERSPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./masters/masters.module').then( m => m.MASTERSPageModule)
+      },
+      {
+        path:':MASTERScourseId',
+        loadChildren: () => import('./masters/masters-course-detail/masters-course-detail.module').then( m => m.MastersCourseDetailPageModule)
+      }
+    ]
   },
-  {
-    path: 'cpd',
-    loadChildren: () => import('./cpd/cpd.module').then( m => m.CPDPageModule)
-  },
+  // {
+  //   path: 'cpd',
+  //   children:[
+  //     {
+  //       path:'',
+  //       loadChildren: () => import('./cpd/cpd.module').then( m => m.CPDPageModule)
+  //     },
+  //     {
+  //       path:':CPDcourseId',
+  //       loadChildren: () => import('./cpd/cpd-course-detail/cpd-course-detail.module').then( m => m.CpdCourseDetailPageModule)
+  //     }
+  //   ]
+  // },
 ];
 
 @NgModule({

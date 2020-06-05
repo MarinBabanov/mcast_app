@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>CPD</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let CPDcourse of CPDcourses" [routerLink]="['./', CPDcourse.index]">
+      <ion-label color="dark">{{ CPDcourse.index }} {{ CPDcourse.title }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

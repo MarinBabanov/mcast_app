@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Generic Degree</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let GENERICcourse of GENERICcourses" [routerLink]="['./', GENERICcourse.index]">
+      <ion-label color="dark">{{ GENERICcourse.index }} {{ GENERICcourse.title }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+

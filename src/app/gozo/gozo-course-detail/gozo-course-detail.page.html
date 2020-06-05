@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons>
+      <ion-back-button defaultHref="/gozo"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ loadedGOZOcourse.index }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <!-- Title-->
+      <ion-col>        
+        <h1> {{ loadedGOZOcourse.title }}</h1>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <!-- Index-->
+          <ion-item>
+            <ion-text color="secondary">Course Index <ion-text color="dark">{{ loadedGOZOcourse.index }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Institute-->
+          <ion-item>
+            <ion-text color="secondary">Institute: <ion-text color="dark">{{ loadedGOZOcourse.institute }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Code-->
+          <ion-item>
+            <ion-text color="secondary">Course Code: <ion-text color="dark">{{ loadedGOZOcourse.code }}</ion-text> </ion-text>
+          </ion-item>
+        
+          <!-- MQF-->
+          <ion-item>
+            <ion-text color="secondary">MQF: <ion-text color="dark">{{ loadedGOZOcourse.mqf }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Entry Requirements-->
+          <ion-item>
+            <ion-text color="secondary">Entry Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGOZOcourse.req_entry">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="secondary">Compulsory Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGOZOcourse.req_compulsory">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="secondary">Preferred Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGOZOcourse.req_preferred">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="secondary">Other Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGOZOcourse.req_other">
+            {{ er }}
+          </ion-item>
+
+          <!-- Description EN. MT-->
+          <ion-item>
+            <ion-text color="secondary">Course Description: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedGOZOcourse.desc_en }}
+          </ion-item>
+          <ion-item>
+            {{ loadedGOZOcourse.desc_mt }}
+          </ion-item>
+
+          <!-- Careers-->
+          <ion-item>
+            <ion-text color="secondary">Careers: <ion-text color="dark">{{ loadedGOZOcourse.careers }}</ion-text> </ion-text>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

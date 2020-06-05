@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GOZOcourse } from './gozocourses.model';
+import { GozoService } from './gozo.service';
 
 @Component({
   selector: 'app-gozo',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GOZOPage implements OnInit {
 
-  constructor() { }
+  GOZOcourses: GOZOcourse[];
+
+  constructor(private gozoService: GozoService) { }
 
   ngOnInit() {
+    this.GOZOcourses = this.gozoService.getAllGOZOcourses();
   }
 
 }

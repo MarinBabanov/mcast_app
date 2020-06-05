@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
+    <ion-buttons>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Institute of Information & Communication Technology</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let IICTcourse of IICTcourses" [routerLink]="['./', IICTcourse.index]">
+      <ion-label color="warning">{{ IICTcourse.index }} {{ IICTcourse.title }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

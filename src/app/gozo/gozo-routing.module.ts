@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: GOZOPage
+  },
+  {
+    path: 'gozo-course-detail',
+    loadChildren: () => import('./gozo-course-detail/gozo-course-detail.module').then( m => m.GozoCourseDetailPageModule)
   }
 ];
 

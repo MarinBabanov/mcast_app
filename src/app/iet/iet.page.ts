@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IETcourse } from './ietcourses.model';
+import { IetService } from './iet.service';
 
 @Component({
   selector: 'app-iet',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IETPage implements OnInit {
 
-  constructor() { }
+  IETcourses: IETcourse[];
+
+  constructor(private ietService: IetService) { }
 
   ngOnInit() {
+    this.IETcourses = this.ietService.getAllIETcourses();
   }
 
 }

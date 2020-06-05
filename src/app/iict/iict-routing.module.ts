@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: IICTPage
+  },
+  {
+    path: 'iict-course-detail',
+    loadChildren: () => import('./iict-course-detail/iict-course-detail.module').then( m => m.IictCourseDetailPageModule)
   }
 ];
 

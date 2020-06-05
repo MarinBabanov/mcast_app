@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CPDcourse } from './cpdcourses.model';
+import { CpdService } from './cpd.service';
 
 @Component({
   selector: 'app-cpd',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CPDPage implements OnInit {
 
-  constructor() { }
+  CPDcourses: CPDcourse[];
+
+  constructor(private cpdService: CpdService) { }
 
   ngOnInit() {
+    this.CPDcourses = this.cpdService.getAllCPDcourses();
   }
 
 }

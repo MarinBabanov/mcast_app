@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Institute of Business Management & Commerce</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let IBMCcourse of IBMCcourses" [routerLink]="['./', IBMCcourse.index]">
+      <ion-label color="danger">{{ IBMCcourse.index }} {{ IBMCcourse.title }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

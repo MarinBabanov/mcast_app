@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: CPDPage
+  },
+  {
+    path: 'cpd-course-detail',
+    loadChildren: () => import('./cpd-course-detail/cpd-course-detail.module').then( m => m.CpdCourseDetailPageModule)
   }
 ];
 

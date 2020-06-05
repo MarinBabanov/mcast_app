@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: GENERICPage
+  },
+  {
+    path: 'generic-course-detail',
+    loadChildren: () => import('./generic-course-detail/generic-course-detail.module').then( m => m.GenericCourseDetailPageModule)
   }
 ];
 

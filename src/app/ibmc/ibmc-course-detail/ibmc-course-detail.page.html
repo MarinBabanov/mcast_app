@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-back-button defaultHref="/ibmc"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ loadedIBMCcourse.index }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <!-- Title-->
+      <ion-col>        
+        <h1> {{ loadedIBMCcourse.title }}</h1>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <!-- Index-->
+          <ion-item>
+            <ion-text color="danger">Course Index <ion-text color="dark">{{ loadedIBMCcourse.index }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Institute-->
+          <ion-item>
+            <ion-text color="danger">Institute: <ion-text color="dark">{{ loadedIBMCcourse.institute }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Code-->
+          <ion-item>
+            <ion-text color="danger">Course Code: <ion-text color="dark">{{ loadedIBMCcourse.code }}</ion-text> </ion-text>
+          </ion-item>
+        
+          <!-- MQF-->
+          <ion-item>
+            <ion-text color="danger">MQF: <ion-text color="dark">{{ loadedIBMCcourse.mqf }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Entry Requirements-->
+          <ion-item>
+            <ion-text color="danger">Entry Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedIBMCcourse.req_entry">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="danger">Compulsory Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedIBMCcourse.req_compulsory">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="danger">Preferred Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedIBMCcourse.req_preferred">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="danger">Other Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedIBMCcourse.req_other">
+            {{ er }}
+          </ion-item>
+
+          <!-- Description EN. MT-->
+          <ion-item>
+            <ion-text color="danger">Course Description: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedIBMCcourse.desc_en }}
+          </ion-item>
+          <ion-item>
+            {{ loadedIBMCcourse.desc_mt }}
+          </ion-item>
+
+          <!-- Careers-->
+          <ion-item>
+            <ion-text color="danger">Careers: <ion-text color="dark">{{ loadedIBMCcourse.careers }}</ion-text> </ion-text>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

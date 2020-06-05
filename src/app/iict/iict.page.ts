@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IICTcourse } from './iictcourses.model';
+import { IictService } from './iict.service';
 
 @Component({
   selector: 'app-iict',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IICTPage implements OnInit {
 
-  constructor() { }
+  IICTcourses: IICTcourse[];
+
+  constructor(private iictService: IictService) { }
 
   ngOnInit() {
+    this.IICTcourses = this.iictService.getAllIICTcourses();
   }
 
 }

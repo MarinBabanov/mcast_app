@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button defaultHref="/generic"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ loadedGENERICcourse.index }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <!-- Title-->
+      <ion-col>        
+        <h1> {{ loadedGENERICcourse.title }}</h1>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <!-- Index-->
+          <ion-item>
+            <ion-text color="dark">Course Index <ion-text color="dark">{{ loadedGENERICcourse.index }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Institute-->
+          <ion-item>
+            <ion-text color="dark">Institute: <ion-text color="dark">{{ loadedGENERICcourse.institute }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Code-->
+          <ion-item>
+            <ion-text color="dark">Course Code: <ion-text color="dark">{{ loadedGENERICcourse.code }}</ion-text> </ion-text>
+          </ion-item>
+        
+          <!-- MQF-->
+          <ion-item>
+            <ion-text color="dark">MQF: <ion-text color="dark">{{ loadedGENERICcourse.mqf }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Entry Requirements-->
+          <ion-item>
+            <ion-text color="dark">Entry Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGENERICcourse.req_entry">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="dark">Compulsory Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGENERICcourse.req_compulsory">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="dark">Preferred Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGENERICcourse.req_preferred">
+            {{ er }}
+          </ion-item>
+
+          <ion-item>
+            <ion-text color="dark">Other Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedGENERICcourse.req_other">
+            {{ er }}
+          </ion-item>
+
+          <!-- Description EN. MT-->
+          <ion-item>
+            <ion-text color="dark">Course Description: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedGENERICcourse.desc_en }}
+          </ion-item>
+          <ion-item>
+            {{ loadedGENERICcourse.desc_mt }}
+          </ion-item>
+
+          <!-- Careers-->
+          <ion-item>
+            <ion-text color="dark">Careers: <ion-text color="dark">{{ loadedGENERICcourse.careers }}</ion-text> </ion-text>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

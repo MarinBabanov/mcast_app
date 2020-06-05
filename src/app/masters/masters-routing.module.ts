@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: MASTERSPage
+  },
+  {
+    path: 'masters-course-detail',
+    loadChildren: () => import('./masters-course-detail/masters-course-detail.module').then( m => m.MastersCourseDetailPageModule)
   }
 ];
 

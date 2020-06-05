@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: IBMCPage
+  },
+  {
+    path: 'ibmc-course-detail',
+    loadChildren: () => import('./ibmc-course-detail/ibmc-course-detail.module').then( m => m.IbmcCourseDetailPageModule)
   }
 ];
 

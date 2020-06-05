@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-back-button defaultHref="/masters"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ loadedMASTERScourse.index }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <!-- Title-->
+      <ion-col>        
+        <h1> {{ loadedMASTERScourse.title }}</h1>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <!-- Index-->
+          <ion-item>
+            <ion-text color="tertiary">Course Index <ion-text color="dark">{{ loadedMASTERScourse.index }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Institute-->
+          <ion-item>
+            <ion-text color="tertiary">Institute: <ion-text color="dark">{{ loadedMASTERScourse.institute }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Code-->
+          <ion-item>
+            <ion-text color="tertiary">Course Code: <ion-text color="dark">{{ loadedMASTERScourse.code }}</ion-text> </ion-text>
+          </ion-item>
+        
+          <!-- MQF-->
+          <ion-item>
+            <ion-text color="tertiary">MQF: <ion-text color="dark">{{ loadedMASTERScourse.mqf }}</ion-text> </ion-text>
+          </ion-item>
+
+          <!-- Entry Requirements-->
+          <ion-item>
+            <ion-text color="tertiary">Entry Requirements:</ion-text>
+          </ion-item>
+          <ion-item *ngFor="let er of loadedMASTERScourse.req_entry">
+            {{ er }}
+          </ion-item>
+
+          <!-- Description EN. MT-->
+          <ion-item>
+            <ion-text color="tertiary">Course Description: </ion-text>
+          </ion-item>
+          <ion-item>
+            {{ loadedMASTERScourse.desc_en }}
+          </ion-item>
+          <ion-item>
+            {{ loadedMASTERScourse.desc_mt }}
+          </ion-item>
+
+          <!-- Careers-->
+          <ion-item>
+            <ion-text color="tertiary">Careers: <ion-text color="dark">{{ loadedMASTERScourse.careers }}</ion-text> </ion-text>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
